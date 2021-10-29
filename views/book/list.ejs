@@ -1,17 +1,20 @@
 <%- include ../partials/header.ejs %>
 
+<!-- //Mehreen Abdul Rahman
+//301169356
+//29-10-2021
+//COMP229-008 Midterm -->
+
   <!-- Main Content -->
   <main class="container">
     <div class="row">
         <h1><%= title %></h1>
         <br>
         <div>
-            <!-- ------------------------ -->
-            <!-- Fix the ADD button below -->
-            <!-- ------------------------ -->
+            <!-- Fixed Add Button to link to "Add a new Book" page -->
             <a href="/book/add" class="btn btn-primary align-self-end" role="button">
                 <i class="fas fa-plus-circle"></i> 
-                Add a new Item
+                Add a new Book
             </a>                
         </div>
 
@@ -42,16 +45,12 @@
                         <td class="text-center"><%= books[count].Genre %></td>
                         
                         <td class="text-center">
-                            <!-- ------------------------- -->
-                            <!-- Fix the EDIT button below -->
-                            <!-- ------------------------ -->
+                            <!-- Added an Edit Button to link to "Edit Book" page -->
                             <a href="/book/edit/<%= books[count]._id %>" class="btn btn-primary btn-sm">
                             <i class="fas fa-pencil-alt"></i></a>
                         </td>
                         <td class="text-center">
-                            <!-- --------------------------- -->
-                            <!-- Fix the DELETE button below -->
-                            <!-- --------------------------- -->
+                            <!-- Fixed the Delete Button -->
                             <a href="/book/delete/<%= books[count]._id %>" class="btn btn-danger btn-sm">
                             <i class="fas fa-trash-alt"></i></a>
                         </td>

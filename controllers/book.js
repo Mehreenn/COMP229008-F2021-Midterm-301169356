@@ -1,3 +1,8 @@
+//Mehreen Abdul Rahman
+//301169356
+//29-10-2021
+//COMP229-008 Midterm
+
 // create a reference to the model
 let Book = require('../models/book');
 
@@ -41,7 +46,9 @@ module.exports.details = (req, res, next) => {
     });
 }
 
-// Renders the Add form using the add_edit.ejs template
+
+//function logic that renders the "Add a new Book page" using add_edit.ejs template
+//to display add page which can add a new book to database
 module.exports.displayAddPage = (req, res, next) => {
     
     let newBook = Book();
@@ -53,7 +60,8 @@ module.exports.displayAddPage = (req, res, next) => {
 
 }
 
-// Processes the data submitted from the Add form to create a new book
+
+//function logic that processes data/book when entered into the database 
 module.exports.processAddPage = (req, res, next) => {
 
     let newBook = Book({
@@ -73,7 +81,7 @@ module.exports.processAddPage = (req, res, next) => {
         }
         else
         {
-            // refresh the book list
+            //routes user back to list and refreshes with added changes
             console.log(book);
             res.redirect('/book/list');
         }
@@ -81,7 +89,8 @@ module.exports.processAddPage = (req, res, next) => {
 
 }
 
-// Gets a book by id and renders the Edit form using the add_edit.ejs template
+
+//function logic to get book using id and renders Edit page (/controllers/add_edit)
 module.exports.displayEditPage = (req, res, next) => {
     
     let id = req.params.id;
@@ -104,7 +113,8 @@ module.exports.displayEditPage = (req, res, next) => {
 
 }
 
-// Processes the data submitted from the Edit form to update a book
+
+//function logic processes and updates data/book using id
 module.exports.processEditPage = (req, res, next) => {
     
     let id = req.params.id
@@ -126,15 +136,14 @@ module.exports.processEditPage = (req, res, next) => {
         }
         else
         {
-            // console.log(req.body);
-            // refresh the book list
+            //routes user back to list and refreshes with changes
             res.redirect('/book/list');
         }
     });
     
 }
 
-// Deletes a book based on its id.
+//function logic processes delete using id property from database
 module.exports.performDelete = (req, res, next) => {
     
     let id = req.params.id;
@@ -148,7 +157,7 @@ module.exports.performDelete = (req, res, next) => {
         }
         else
         {
-            // refresh the book list
+            //routes user back to list and refreshes with changes
             res.redirect('/book/list');
         }
     });

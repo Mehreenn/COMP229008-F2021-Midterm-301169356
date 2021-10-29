@@ -9,6 +9,7 @@ let mongoose = require('mongoose');
 let dbURI = require('./db');
 
 // Connect to the Database
+//connected to BooksDB
 mongoose.connect(dbURI.BooksDB);
 
 let mongoDB = mongoose.connection;
