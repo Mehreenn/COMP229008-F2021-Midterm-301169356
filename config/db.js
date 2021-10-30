@@ -1,5 +1,6 @@
 module.exports = {
-    "BooksDB": "mongodb://localhost/fav_booklist"
+    //"BooksDB": "mongodb://localhost/fav_booklist"
+    "BooksDB": "mongodb+srv://mehreen:n7vSRukniC3NQDGN@mongodbserver.rfhxe.mongodb.net/fav_booklist?retryWrites=true&w=majority"
 }
 
 //COMP229008-F2021-Midterm-301169356
